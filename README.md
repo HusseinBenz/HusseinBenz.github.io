@@ -13,5 +13,6 @@ Links out to:
 - [Mawaqit Adhan](https://husseinbenz.github.io/mawaqit-adhan/)
 - [Fiqh al-Ṣalāt](https://husseinbenz.github.io/fiqh-al-salat/)
 - [The Islamic Index](https://husseinbenz.github.io/The-Islamic-Index/)
+- [Tarteel](https://husseinbenz.github.io/tarteel/)
 
 The old address https://husseinbenz.github.io/islamic-projects/ redirects here.

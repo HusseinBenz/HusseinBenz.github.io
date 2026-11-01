@@ -86,6 +86,18 @@
 @keyframes tl-play { from { left: 94px; } to { left: calc(100% - 24px); } }
 .card { animation: sk-rise .5s var(--ease) both; }
 
+/* Tarteel preview: a verse colored by rule, using Tarteel's own rule colors */
+.card__tajweed { --tj-gh: #D96E06; --tj-ob: #1D3FBF; --tj-na: #3B82F6; --tj-gr: #8C8C98; flex: 0 1 520px; align-self: center; display: flex; flex-direction: column; gap: 10px; padding: 20px 22px; border-radius: 20px; background: var(--bg); border: 1px solid var(--line); }
+[data-theme="dark"] .card__tajweed, .sk-night .card__tajweed { --tj-gh: #FFA64D; --tj-ob: #8499FF; --tj-na: #7CB3FF; --tj-gr: #8E8E9A; }
+.tjw-verse { margin: 0; text-align: center; font-size: clamp(30px, 3vw, 40px); line-height: 2; letter-spacing: 0; color: var(--text); }
+.tjw-verse b { font-weight: 400; }
+.tj-ghunnah { color: var(--tj-gh); } .tj-madda_obligatory { color: var(--tj-ob); } .tj-madda_normal { color: var(--tj-na); } .tj-ham_wasl { color: var(--tj-gr); }
+.tjw-ref { margin: 0; text-align: center; font-size: 13px; color: var(--text-3); }
+.tjw-key { list-style: none; margin: 4px 0 0; padding: 12px 0 0; border-top: 1px dashed var(--line); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 16px; font-size: 13px; font-weight: 500; color: var(--text-2); }
+.tjw-key li { display: flex; align-items: center; gap: 8px; }
+.tjw-dot { width: 9px; height: 9px; flex: none; border-radius: 50%; background: currentColor; }
+.bento.is-filtered .card__tajweed { display: none; }
+
 .card__preview { width: 330px; flex: none; display: flex; flex-direction: column; gap: 10px; padding: 18px; border-radius: 20px; background: var(--bg); border: 1px solid var(--line); }
 .mini-search { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 14px; border-radius: 999px; background: var(--surface); border: 1px solid var(--primary); box-shadow: 0 0 0 4px var(--primary-soft); font-size: 14.5px; font-weight: 500; }
 .mini-search svg { color: var(--text-3); }
@@ -135,7 +147,7 @@
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
   .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .card__preview, .card__timeline { display: none; }
+  .card__preview, .card__timeline, .card__tajweed { display: none; }
   .card--wide-lg { grid-column: auto; }
   .moon-chip { inset-inline-end: auto; inset-inline-start: calc(100% - 440px - var(--gutter) - 48px); }
 }
